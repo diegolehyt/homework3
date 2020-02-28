@@ -207,7 +207,10 @@ else {
 let Q2 = pass.length - Psize
 pass = pass.substr(0, (pass.length - Q2))
 
-document.write(pass)
+
+
+//print to screen test
+//document.write(pass)
 
 
 
@@ -227,8 +230,8 @@ document.write(pass)
 let generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword(pass) {
-  let password = generatePassword(pass);
+function writePassword() {
+  let password = pass;
   let passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -236,4 +239,4 @@ function writePassword(pass) {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword(pass));
+generateBtn.addEventListener("click", writePassword());
