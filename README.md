@@ -15,23 +15,11 @@ instruction
 
   step 2
 
-  ![Lenght](images/2.png)
-
-  -An alert will pop up and it will ask you to choose the lenght of your password.
-
-  step 3
-
-  ![sample criteria 1/4](images/3.png)
-
-  -Follow by 4 question (what type of characters would you like to include? you can pick more than one: lower case, upper case, symbols and numeric) which will be the criteria to build your password.
-
-  step 4
-
   ![Generate password](images/4.png)
 
   -Click on Generate button and the new password will print inside the box.
 
-  step 5
+  step 3
 
    invalid lenght
 
@@ -45,7 +33,19 @@ instruction
 
    -Choose at least one of the four password criteria, or you will receive an "invalid input" alert message.
 
+  step 4
 
+  ![Lenght](images/2.png)
+
+  -An alert will pop up and it will ask you to choose the lenght of your password.
+
+  step 5
+
+  ![sample criteria 1/4](images/3.png)
+
+  -Follow by 4 question (what type of characters would you like to include? you can pick more than one: lower case, upper case, symbols and numeric) which will be the criteria to build your password.
+
+  
 Description
 
 This is a password generator builded with javascript, which can support the layout of: CellPhones "640px", Tablets "768px", and Laptops "980px"

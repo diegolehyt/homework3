@@ -40,143 +40,144 @@ function Rdm(arr){
 }
 
 //Program
-//Part 1
-// all 4
+
 if (Psize < 8 || Psize > 128) {
     alert('invalid password lenght')
-
+    
 }
-
-else if (l === true & u === true & s === true & n === true){
-    Q = Psize / 4
-    Q = Math.ceil(Q)
-    for (let i = 0; i < Q; i++) {
-        pass = pass + low[Rdm(low)]
-        pass = pass + up[Rdm(up)]
-        pass = pass + sym[Rdm(sym)]
-        pass = pass + num[Rdm(num)]
-    }
-}
-// 3
-else if (l === true & u === true & s === true & n === false){
-    Q = Psize / 3
-    Q = Math.ceil(Q)
-    for (let i = 0; i < Q; i++) {
-        pass = pass + low[Rdm(low)]
-        pass = pass + up[Rdm(up)]
-        pass = pass + sym[Rdm(sym)]
-    }
-}
-else if (l === false & u === true & s === true & n === true){
-    Q = Psize / 3
-    Q = Math.ceil(Q)
-    for (let i = 0; i < Q; i++) {
-        pass = pass + up[Rdm(up)]
-        pass = pass + sym[Rdm(sym)]
-        pass = pass + num[Rdm(num)]
-    }
-}
-else if (l === true & u === false & s === true & n === true){
-    Q = Psize / 3
-    Q = Math.ceil(Q)
-    for (let i = 0; i < Q; i++) {
-        pass = pass + low[Rdm(low)]
-        pass = pass + sym[Rdm(sym)]
-        pass = pass + num[Rdm(num)]
-    }
-}
-else if (l === true & u === true & s === false & n === true){
-    Q = Psize / 3
-    Q = Math.ceil(Q)
-    for (let i = 0; i < Q; i++) {
-        pass = pass + low[Rdm(low)]
-        pass = pass + up[Rdm(up)]
-        pass = pass + num[Rdm(num)]
-    }
-}
-// 2
-else if (l === false & u === false & s === true & n === true){
-    Q = Psize / 2
-    Q = Math.ceil(Q)
-    for (let i = 0; i < Q; i++) {
-        pass = pass + sym[Rdm(sym)]
-        pass = pass + num[Rdm(num)]
-    }
-}
-else if (l === true & u === true & s === false & n === false){
-    Q = Psize / 2
-    Q = Math.ceil(Q)
-    for (let i = 0; i < Q; i++) {
-        pass = pass + low[Rdm(low)]
-        pass = pass + up[Rdm(up)]
-    }
-}
-else if (l === false & u === true & s === false & n === true){
-    Q = Psize / 2
-    Q = Math.ceil(Q)
-    for (let i = 0; i < Q; i++) {
-        pass = pass + up[Rdm(up)]
-        pass = pass + num[Rdm(num)]
-    }
-}
-else if (l === true & u === false & s === true & n === false){
-    Q = Psize / 2
-    Q = Math.ceil(Q)
-    for (let i = 0; i < Q; i++) {
-        pass = pass + low[Rdm(low)]
-        pass = pass + sym[Rdm(sym)]
-    }
-}
-else if (l === false & u === true & s === true & n === false){
-    Q = Psize / 2
-    Q = Math.ceil(Q)
-    for (let i = 0; i < Q; i++) {
-        pass = pass + up[Rdm(up)]
-        pass = pass + sym[Rdm(sym)]
-    }
-}
-else if (l === true & u === false & s === false & n === true){
-    Q = Psize / 2
-    Q = Math.ceil(Q)
-    for (let i = 0; i < Q; i++) {
-        pass = pass + low[Rdm(low)]
-        pass = pass + num[Rdm(num)]
-    }
-}
-// 1
-else if (l === true & u === false & s === false & n === false){
-    Q = Psize / 1
-    Q = Math.ceil(Q)
-    for (let i = 0; i < Q; i++) {
-        pass = pass + low[Rdm(low)]
-    }
-}
-else if (l === false & u === true & s === false & n === false){
-    Q = Psize / 1
-    Q = Math.ceil(Q)
-    for (let i = 0; i < Q; i++) {
-        pass = pass + up[Rdm(up)]
-    }
-}
-else if (l === false & u === false & s === true & n === false){
-    Q = Psize / 1
-    Q = Math.ceil(Q)
-    for (let i = 0; i < Q; i++) {
-        pass = pass + sym[Rdm(sym)]
-    }
-}
-else if (l === false & u === false & s === false & n === true){
-    Q = Psize / 1
-    Q = Math.ceil(Q)
-    for (let i = 0; i < Q; i++) {
-        pass = pass + num[Rdm(num)]
-    }
-}
-// 0
 else {
-    alert('invalid input')
+    //Part 1
+    // all 4
+    if (l === true & u === true & s === true & n === true){
+        Q = Psize / 4
+        Q = Math.ceil(Q)
+        for (let i = 0; i < Q; i++) {
+            pass = pass + low[Rdm(low)]
+            pass = pass + up[Rdm(up)]
+            pass = pass + sym[Rdm(sym)]
+            pass = pass + num[Rdm(num)]
+        }
+    }
+    // 3
+    else if (l === true & u === true & s === true & n === false){
+        Q = Psize / 3
+        Q = Math.ceil(Q)
+        for (let i = 0; i < Q; i++) {
+            pass = pass + low[Rdm(low)]
+            pass = pass + up[Rdm(up)]
+            pass = pass + sym[Rdm(sym)]
+        }
+    }
+    else if (l === false & u === true & s === true & n === true){
+        Q = Psize / 3
+        Q = Math.ceil(Q)
+        for (let i = 0; i < Q; i++) {
+            pass = pass + up[Rdm(up)]
+            pass = pass + sym[Rdm(sym)]
+            pass = pass + num[Rdm(num)]
+        }
+    }
+    else if (l === true & u === false & s === true & n === true){
+        Q = Psize / 3
+        Q = Math.ceil(Q)
+        for (let i = 0; i < Q; i++) {
+            pass = pass + low[Rdm(low)]
+            pass = pass + sym[Rdm(sym)]
+            pass = pass + num[Rdm(num)]
+        }
+    }
+    else if (l === true & u === true & s === false & n === true){
+        Q = Psize / 3
+        Q = Math.ceil(Q)
+        for (let i = 0; i < Q; i++) {
+            pass = pass + low[Rdm(low)]
+            pass = pass + up[Rdm(up)]
+            pass = pass + num[Rdm(num)]
+        }
+    }
+    // 2
+    else if (l === false & u === false & s === true & n === true){
+        Q = Psize / 2
+        Q = Math.ceil(Q)
+        for (let i = 0; i < Q; i++) {
+            pass = pass + sym[Rdm(sym)]
+            pass = pass + num[Rdm(num)]
+        }
+    }
+    else if (l === true & u === true & s === false & n === false){
+        Q = Psize / 2
+        Q = Math.ceil(Q)
+        for (let i = 0; i < Q; i++) {
+            pass = pass + low[Rdm(low)]
+            pass = pass + up[Rdm(up)]
+        }
+    }
+    else if (l === false & u === true & s === false & n === true){
+        Q = Psize / 2
+        Q = Math.ceil(Q)
+        for (let i = 0; i < Q; i++) {
+            pass = pass + up[Rdm(up)]
+            pass = pass + num[Rdm(num)]
+        }
+    }
+    else if (l === true & u === false & s === true & n === false){
+        Q = Psize / 2
+        Q = Math.ceil(Q)
+        for (let i = 0; i < Q; i++) {
+            pass = pass + low[Rdm(low)]
+            pass = pass + sym[Rdm(sym)]
+        }
+    }
+    else if (l === false & u === true & s === true & n === false){
+        Q = Psize / 2
+        Q = Math.ceil(Q)
+        for (let i = 0; i < Q; i++) {
+            pass = pass + up[Rdm(up)]
+            pass = pass + sym[Rdm(sym)]
+        }
+    }
+    else if (l === true & u === false & s === false & n === true){
+        Q = Psize / 2
+        Q = Math.ceil(Q)
+        for (let i = 0; i < Q; i++) {
+            pass = pass + low[Rdm(low)]
+            pass = pass + num[Rdm(num)]
+        }
+    }
+    // 1
+    else if (l === true & u === false & s === false & n === false){
+        Q = Psize / 1
+        Q = Math.ceil(Q)
+        for (let i = 0; i < Q; i++) {
+            pass = pass + low[Rdm(low)]
+        }
+    }
+    else if (l === false & u === true & s === false & n === false){
+        Q = Psize / 1
+        Q = Math.ceil(Q)
+        for (let i = 0; i < Q; i++) {
+            pass = pass + up[Rdm(up)]
+        }
+    }
+    else if (l === false & u === false & s === true & n === false){
+        Q = Psize / 1
+        Q = Math.ceil(Q)
+        for (let i = 0; i < Q; i++) {
+            pass = pass + sym[Rdm(sym)]
+        }
+    }
+    else if (l === false & u === false & s === false & n === true){
+        Q = Psize / 1
+        Q = Math.ceil(Q)
+        for (let i = 0; i < Q; i++) {
+            pass = pass + num[Rdm(num)]
+        }
+    }
+    // 0
+    else {
+        alert('You have to select at least one criteria')
+    }
 }
-
 //part 2
 //Final lenght formula
 let Q2 = pass.length - Psize
