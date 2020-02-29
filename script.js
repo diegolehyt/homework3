@@ -5,12 +5,9 @@ let generateBtn = document.querySelector("#generate");
 
 // Event listener to generate button by clicking
 generateBtn.addEventListener("click", function() {
-    //Prompt variables
+//Prompt variables
 let Psize = prompt('Choose a length of at least 8 characters and no more than 128 characters')
-let l = confirm('Would you like lowercase characters?')
-let u = confirm('Would you like uppercase characters?')
-let s = confirm('Would you like symbol characters?')
-let n = confirm('Would you like numeric characters?')
+
 
 //Libraries
 let up = [ 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M']
@@ -47,6 +44,11 @@ if (Psize < 8 || Psize > 128) {
 }
 else {
     //Part 1
+    //Prompt Local variables
+    let l = confirm('Would you like lowercase characters?')
+    let u = confirm('Would you like uppercase characters?')
+    let s = confirm('Would you like symbol characters?')
+    let n = confirm('Would you like numeric characters?')
     // all 4
     if (l === true & u === true & s === true & n === true){
         Q = Psize / 4
