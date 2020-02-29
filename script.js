@@ -1,11 +1,11 @@
 //JS
 
 //Prompt variables
-let Psize = prompt('choose a length of at least 8 characters and no more than 128 characters')
-let l = confirm('would you like lowercase characters?')
-let u = confirm('would you like uppercase characters?')
-let s = confirm('would you like symbol characters?')
-let n = confirm('would you like numeric characters?')
+let Psize = prompt('Choose a length of at least 8 characters and no more than 128 characters')
+let l = confirm('Would you like lowercase characters?')
+let u = confirm('Would you like uppercase characters?')
+let s = confirm('Would you like symbol characters?')
+let n = confirm('Would you like numeric characters?')
 
 //Libraries
 let up = [ 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M']
@@ -35,8 +35,14 @@ function Rdm(arr){
 }
 
 //Program
+//Part 1
 // all 4
-if (l === true & u === true & s === true & n === true){
+if (Psize < 8 || Psize > 128) {
+    alert('invalid password lenght')
+
+}
+
+else if (l === true & u === true & s === true & n === true){
     Q = Psize / 4
     Q = Math.ceil(Q)
     for (let i = 0; i < Q; i++) {
@@ -44,10 +50,6 @@ if (l === true & u === true & s === true & n === true){
         pass = pass + up[Rdm(up)]
         pass = pass + sym[Rdm(sym)]
         pass = pass + num[Rdm(num)]
-        //pass.push(low[Rdm(low)])
-        //pass.push(up[Rdm(up)])
-        //pass.push(sym[Rdm(sym)])
-        //pass.push(num[Rdm(num)])
     }
 }
 // 3
@@ -58,14 +60,12 @@ else if (l === true & u === true & s === true & n === false){
         pass = pass + low[Rdm(low)]
         pass = pass + up[Rdm(up)]
         pass = pass + sym[Rdm(sym)]
-        
     }
 }
 else if (l === false & u === true & s === true & n === true){
     Q = Psize / 3
     Q = Math.ceil(Q)
     for (let i = 0; i < Q; i++) {
-        
         pass = pass + up[Rdm(up)]
         pass = pass + sym[Rdm(sym)]
         pass = pass + num[Rdm(num)]
@@ -75,9 +75,7 @@ else if (l === true & u === false & s === true & n === true){
     Q = Psize / 3
     Q = Math.ceil(Q)
     for (let i = 0; i < Q; i++) {
-        
         pass = pass + low[Rdm(low)]
-        
         pass = pass + sym[Rdm(sym)]
         pass = pass + num[Rdm(num)]
     }
@@ -86,10 +84,8 @@ else if (l === true & u === true & s === false & n === true){
     Q = Psize / 3
     Q = Math.ceil(Q)
     for (let i = 0; i < Q; i++) {
-
         pass = pass + low[Rdm(low)]
         pass = pass + up[Rdm(up)]
-        
         pass = pass + num[Rdm(num)]
     }
 }
@@ -98,7 +94,6 @@ else if (l === false & u === false & s === true & n === true){
     Q = Psize / 2
     Q = Math.ceil(Q)
     for (let i = 0; i < Q; i++) {
-        
         pass = pass + sym[Rdm(sym)]
         pass = pass + num[Rdm(num)]
     }
@@ -109,16 +104,13 @@ else if (l === true & u === true & s === false & n === false){
     for (let i = 0; i < Q; i++) {
         pass = pass + low[Rdm(low)]
         pass = pass + up[Rdm(up)]
-        
     }
 }
 else if (l === false & u === true & s === false & n === true){
     Q = Psize / 2
     Q = Math.ceil(Q)
     for (let i = 0; i < Q; i++) {
-        
         pass = pass + up[Rdm(up)]
-        
         pass = pass + num[Rdm(num)]
     }
 }
@@ -126,76 +118,52 @@ else if (l === true & u === false & s === true & n === false){
     Q = Psize / 2
     Q = Math.ceil(Q)
     for (let i = 0; i < Q; i++) {
-        
         pass = pass + low[Rdm(low)]
-        
         pass = pass + sym[Rdm(sym)]
-       
     }
 }
 else if (l === false & u === true & s === true & n === false){
     Q = Psize / 2
     Q = Math.ceil(Q)
     for (let i = 0; i < Q; i++) {
-        
-        
         pass = pass + up[Rdm(up)]
         pass = pass + sym[Rdm(sym)]
-        
     }
 }
 else if (l === true & u === false & s === false & n === true){
     Q = Psize / 2
     Q = Math.ceil(Q)
     for (let i = 0; i < Q; i++) {
-        
         pass = pass + low[Rdm(low)]
-        
         pass = pass + num[Rdm(num)]
     }
 }
-
 // 1
 else if (l === true & u === false & s === false & n === false){
     Q = Psize / 1
     Q = Math.ceil(Q)
     for (let i = 0; i < Q; i++) {
         pass = pass + low[Rdm(low)]
-        
     }
 }
-
-
-
 else if (l === false & u === true & s === false & n === false){
     Q = Psize / 1
     Q = Math.ceil(Q)
     for (let i = 0; i < Q; i++) {
-        
         pass = pass + up[Rdm(up)]
-        
     }
 }
-
-
-
 else if (l === false & u === false & s === true & n === false){
     Q = Psize / 1
     Q = Math.ceil(Q)
     for (let i = 0; i < Q; i++) {
-        
         pass = pass + sym[Rdm(sym)]
-        
     }
 }
-
-
 else if (l === false & u === false & s === false & n === true){
     Q = Psize / 1
     Q = Math.ceil(Q)
     for (let i = 0; i < Q; i++) {
-        
-        
         pass = pass + num[Rdm(num)]
     }
 }
@@ -203,40 +171,23 @@ else if (l === false & u === false & s === false & n === true){
 else {
     alert('invalid input')
 }
+
 //part 2
+//Final lenght formula
 let Q2 = pass.length - Psize
 pass = pass.substr(0, (pass.length - Q2))
-
-
 
 //print to screen test
 //document.write(pass)
 
-
-
-
-
-//document.write(Rdm(pass))
-//document.write(Rdm(up) + ' ')
-//document.write(Rdm(sym) + ' ')
-//document.write(Rdm(num) + ' ')
-//document.write(Rdm(low) + ' ')
-//document.write(l + ' ' + Q)
-//document.write(' ' + low[Rdm(low)] + sym[Rdm(sym)])
-
-
-
-// Assignment Code
+// Element Var
 let generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-function writePassword() {
-  let password = pass;
-  let passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword());
+// Event listener to generate button by clicking
+generateBtn.addEventListener("click", function() {
+    let password = pass; //"pass" Variable inside here to display after clicking "Generate" button.
+    let passwordText = document.querySelector("#password");
+  
+    passwordText.value = password;
+  
+});
