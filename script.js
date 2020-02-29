@@ -1,6 +1,11 @@
 //JS
 
-//Prompt variables
+// Element Var
+let generateBtn = document.querySelector("#generate");
+
+// Event listener to generate button by clicking
+generateBtn.addEventListener("click", function() {
+    //Prompt variables
 let Psize = prompt('Choose a length of at least 8 characters and no more than 128 characters')
 let l = confirm('Would you like lowercase characters?')
 let u = confirm('Would you like uppercase characters?')
@@ -176,15 +181,6 @@ else {
 //Final lenght formula
 let Q2 = pass.length - Psize
 pass = pass.substr(0, (pass.length - Q2))
-
-//print to screen test
-//document.write(pass)
-
-// Element Var
-let generateBtn = document.querySelector("#generate");
-
-// Event listener to generate button by clicking
-generateBtn.addEventListener("click", function() {
     let password = pass; //"pass" Variable inside here to display after clicking "Generate" button.
     let passwordText = document.querySelector("#password");
   
